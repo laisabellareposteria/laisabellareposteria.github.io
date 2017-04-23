@@ -28,76 +28,76 @@
 <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
 <script>
 $(document).ready(function() {
-	//
+  //
 
-	$('#camera_wrap').camera({
-		//thumbnails: true
-		//alignment			: 'centerRight',
-		autoAdvance			: true,
-		mobileAutoAdvance	: true,
-		fx					: 'simpleFade',
-		height: '41%',
-		hover: false,
-		loader: 'none',
-		navigation: true,
-		navigationHover: true,
-		mobileNavHover: true,
-		playPause: false,
-		pauseOnClick: false,
-		pagination			: true,
-		time: 5000,
-		transPeriod: 1000,
-		minHeight: '200px'
-	});
+  $('#camera_wrap').camera({
+    //thumbnails: true
+    //alignment     : 'centerRight',
+    autoAdvance     : true,
+    mobileAutoAdvance : true,
+    fx          : 'simpleFade',
+    height: '41%',
+    hover: false,
+    loader: 'none',
+    navigation: true,
+    navigationHover: true,
+    mobileNavHover: true,
+    playPause: false,
+    pauseOnClick: false,
+    pagination      : true,
+    time: 5000,
+    transPeriod: 1000,
+    minHeight: '200px'
+  });
 
-	//	carouFredSel banner
-	$('#banner .carousel.main ul').carouFredSel({
-		auto: {
-			timeoutDuration: 8000
-		},
-		responsive: true,
-		prev: '.banner_prev',
-		next: '.banner_next',
-		width: '100%',
-		scroll: {
-			items: 1,
-			duration: 1000,
-			easing: "easeOutExpo"
-		},
-		items: {
-        	width: '350',
-			height: 'variable',	//	optionally resize item-height
-			visible: {
-				min: 1,
-				max: 4
-			}
-		},
-		mousewheel: false,
-		swipe: {
-			onMouse: true,
-			onTouch: true
-			}
-	});
+  //  carouFredSel banner
+  $('#banner .carousel.main ul').carouFredSel({
+    auto: {
+      timeoutDuration: 8000
+    },
+    responsive: true,
+    prev: '.banner_prev',
+    next: '.banner_next',
+    width: '100%',
+    scroll: {
+      items: 1,
+      duration: 1000,
+      easing: "easeOutExpo"
+    },
+    items: {
+          width: '350',
+      height: 'variable', //  optionally resize item-height
+      visible: {
+        min: 1,
+        max: 4
+      }
+    },
+    mousewheel: false,
+    swipe: {
+      onMouse: true,
+      onTouch: true
+      }
+  });
 
 
 
-	$(window).bind("resize",updateSizes_vat).bind("load",updateSizes_vat);
-	function updateSizes_vat(){
-		$('#banner .carousel.main ul').trigger("updateSizes");
-	}
-	updateSizes_vat();
+  $(window).bind("resize",updateSizes_vat).bind("load",updateSizes_vat);
+  function updateSizes_vat(){
+    $('#banner .carousel.main ul').trigger("updateSizes");
+  }
+  updateSizes_vat();
 
 
 
 }); //
 $(window).load(function() {
-	//
+  //
 
 }); //
 </script>
 <!--[if lt IE 8]>
-		<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg"border="0"alt=""/></a></div>
-	<![endif]-->
+    <div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg"border="0"alt=""/></a></div>
+  <![endif]-->
 
 <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -120,37 +120,49 @@ $(window).load(function() {
 <div class="span12">
 <div class="top1 clearfix">
 
-<header><div class="logo_wrapper"><a href="index.html" class="logo"><img src="images/logo.png" alt=""></a></div></header>
+<header><div class="logo_wrapper"><a href="index.html" class="logo"><img src="images/logo-4f.png" alt=""></a></div></header>
 
 <div class="navbar navbar_">
-	<div class="navbar-inner navbar-inner_">
-		<a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</a>
-		<div class="nav-collapse nav-collapse_ collapse clearfix">
+  <div class="navbar-inner navbar-inner_">
+    <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </a>
+    <div class="nav-collapse nav-collapse_ collapse clearfix">
 <ul class="nav nav_left sf-menu clearfix">
-	<li class="active"><a href="index.html">Home</a></li>
-	<li class="sub-menu sub-menu-1"><a href="index-1.html">about us</a>
-		<ul>
-			<li><a href="index-1.html">Who We Are</a></li>
-			<li><a href="index-1.html">Our Team</a></li>
-			<li><a href="index-1.html">Testimonials</a></li>
-			<li><a href="index-1.html">Blog</a></li>
-			<li><a href="404.html">404 page</a></li>
-		</ul>
-	</li>
-	<li><a href="index-2.html">services</a></li>
+  <li class="active"><a href="index.html">Inicio</a></li>
+  <li><a href="">Nosotros</a></li>
+  <li class="sub-menu sub-menu-1"><a href="">T. Temáticas</a>
+    <ul>
+      <li><a href="">Infantiles</a></li>
+      <li><a href="">Deportivas</a></li>
+      <li><a href="">Bautizos</a></li>
+      <li><a href="">Primeras Comuniones</a></li>
+      <li><a href="">Matrimonios</a></li>
+      <li><a href="">Superheroes</a></li>
+      <li><a href="">Navideñas</a></li>
+    </ul>
+  </li>
 </ul>
 
 <ul class="nav nav_right sf-menu clearfix">
-	<li><a href="index-3.html">gallery</a></li>
-	<li><a href="index-4.html">news</a></li>
-	<li><a href="index-5.html">contacts</a></li>
+  <li class="sub-menu sub-menu-1"><a href="">Cupcakes</a>
+    <ul>
+      <li><a href="">Infantiles</a></li>
+      <li><a href="">Deportivas</a></li>
+      <li><a href="">Bautizos</a></li>
+      <li><a href="">Primeras Comuniones</a></li>
+      <li><a href="">Matrimonios</a></li>
+      <li><a href="">Superheroes</a></li>
+      <li><a href="">Navideñas</a></li>
+    </ul>
+  </li>
+  <li><a href="">Brownies</a></li>
+  <li><a href="">contacts</a></li>
 </ul>
-		</div>
-	</div>
+    </div>
+  </div>
 </div>
 
 
@@ -173,24 +185,24 @@ $(window).load(function() {
 <div class="">
 <div id="slider_inner" class="clearfix">
 <div id="slider" class="clearfix">
-	<div id="camera_wrap">
-		<div data-src="images/slide01.jpg">
-			<div class="camera_caption nav1 fadeIn">
-				<div class="txt1">The Best Cakes for the Special Occasions</div>
-			</div>
-		</div>
-		<div data-src="images/slide02.jpg">
-			<div class="camera_caption nav1 fadeIn">
-				<div class="txt1">The Best Cakes for the Special Occasions</div>
-			</div>
-		</div>
-		<div data-src="images/slide03.jpg">
-			<div class="camera_caption nav1 fadeIn">
-				<div class="txt1">The Best Cakes for the Special Occasions</div>
-			</div>
-		</div>
+  <div id="camera_wrap">
+    <div data-src="images/slide01.jpg">
+      <div class="camera_caption nav1 fadeIn">
+        <div class="txt1">La mejor reposteria para cualquier ocasión</div>
+      </div>
+    </div>
+    <div data-src="images/slide02.jpg">
+      <div class="camera_caption nav1 fadeIn">
+        <div class="txt1">La mejor reposteria para cualquier ocasión</div>
+      </div>
+    </div>
+    <div data-src="images/slide03.jpg">
+      <div class="camera_caption nav1 fadeIn">
+        <div class="txt1">La mejor reposteria para cualquier ocasión</div>
+      </div>
+    </div>
 
-	</div>
+  </div>
 </div>
 </div>
 <div class="shadow1"><img src="images/shadow1.png" alt="" class="img"></div>
@@ -203,141 +215,141 @@ $(window).load(function() {
 <a class="banner_prev" href="#"></a>
 <a class="banner_next" href="#"></a>
 <div class="carousel-box">
-	<div class="inner">
-		<div class="carousel main">
-			<ul>
-				<li>
-					<div class="banner">
-						<div class="banner_inner">
-							<a href="#">
-								<div class="banner_inner2">
-									<div class="txt1">Cupcakes</div>
-									<figure><img src="images/banner1.jpg" alt="" class="img"></figure>
-									<div class="txt2">
-										Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do.
-									</div>
-									<div class="txt3">read more</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="banner">
-						<div class="banner_inner">
-							<a href="#">
-								<div class="banner_inner2">
-									<div class="txt1">Birthday</div>
-									<figure><img src="images/banner2.jpg" alt="" class="img"></figure>
-									<div class="txt2">
-										Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do.
-									</div>
-									<div class="txt3">read more</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="banner">
-						<div class="banner_inner">
-							<a href="#">
-								<div class="banner_inner2">
-									<div class="txt1">Wedding</div>
-									<figure><img src="images/banner3.jpg" alt="" class="img"></figure>
-									<div class="txt2">
-										Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do.
-									</div>
-									<div class="txt3">read more</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="banner">
-						<div class="banner_inner">
-							<a href="#">
-								<div class="banner_inner2">
-									<div class="txt1">Special</div>
-									<figure><img src="images/banner4.jpg" alt="" class="img"></figure>
-									<div class="txt2">
-										Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do.
-									</div>
-									<div class="txt3">read more</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="banner">
-						<div class="banner_inner">
-							<a href="#">
-								<div class="banner_inner2">
-									<div class="txt1">Cupcakes</div>
-									<figure><img src="images/banner1.jpg" alt="" class="img"></figure>
-									<div class="txt2">
-										Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do.
-									</div>
-									<div class="txt3">read more</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="banner">
-						<div class="banner_inner">
-							<a href="#">
-								<div class="banner_inner2">
-									<div class="txt1">Birthday</div>
-									<figure><img src="images/banner2.jpg" alt="" class="img"></figure>
-									<div class="txt2">
-										Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do.
-									</div>
-									<div class="txt3">read more</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="banner">
-						<div class="banner_inner">
-							<a href="#">
-								<div class="banner_inner2">
-									<div class="txt1">Wedding</div>
-									<figure><img src="images/banner3.jpg" alt="" class="img"></figure>
-									<div class="txt2">
-										Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do.
-									</div>
-									<div class="txt3">read more</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="banner">
-						<div class="banner_inner">
-							<a href="#">
-								<div class="banner_inner2">
-									<div class="txt1">Special</div>
-									<figure><img src="images/banner4.jpg" alt="" class="img"></figure>
-									<div class="txt2">
-										Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do.
-									</div>
-									<div class="txt3">read more</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</li>
+  <div class="inner">
+    <div class="carousel main">
+      <ul>
+        <li>
+          <div class="banner">
+            <div class="banner_inner">
+              <a href="#">
+                <div class="banner_inner2">
+                  <div class="txt1">Cupcakes</div>
+                  <figure><img src="images/banner1.jpg" alt="" class="img"></figure>
+                  <div class="txt2">
+                    Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do.
+                  </div>
+                  <div class="txt3">read more</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="banner">
+            <div class="banner_inner">
+              <a href="#">
+                <div class="banner_inner2">
+                  <div class="txt1">Birthday</div>
+                  <figure><img src="images/banner2.jpg" alt="" class="img"></figure>
+                  <div class="txt2">
+                    Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do.
+                  </div>
+                  <div class="txt3">read more</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="banner">
+            <div class="banner_inner">
+              <a href="#">
+                <div class="banner_inner2">
+                  <div class="txt1">Wedding</div>
+                  <figure><img src="images/banner3.jpg" alt="" class="img"></figure>
+                  <div class="txt2">
+                    Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do.
+                  </div>
+                  <div class="txt3">read more</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="banner">
+            <div class="banner_inner">
+              <a href="#">
+                <div class="banner_inner2">
+                  <div class="txt1">Special</div>
+                  <figure><img src="images/banner4.jpg" alt="" class="img"></figure>
+                  <div class="txt2">
+                    Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do.
+                  </div>
+                  <div class="txt3">read more</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="banner">
+            <div class="banner_inner">
+              <a href="#">
+                <div class="banner_inner2">
+                  <div class="txt1">Cupcakes</div>
+                  <figure><img src="images/banner1.jpg" alt="" class="img"></figure>
+                  <div class="txt2">
+                    Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do.
+                  </div>
+                  <div class="txt3">read more</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="banner">
+            <div class="banner_inner">
+              <a href="#">
+                <div class="banner_inner2">
+                  <div class="txt1">Birthday</div>
+                  <figure><img src="images/banner2.jpg" alt="" class="img"></figure>
+                  <div class="txt2">
+                    Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do.
+                  </div>
+                  <div class="txt3">read more</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="banner">
+            <div class="banner_inner">
+              <a href="#">
+                <div class="banner_inner2">
+                  <div class="txt1">Wedding</div>
+                  <figure><img src="images/banner3.jpg" alt="" class="img"></figure>
+                  <div class="txt2">
+                    Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do.
+                  </div>
+                  <div class="txt3">read more</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="banner">
+            <div class="banner_inner">
+              <a href="#">
+                <div class="banner_inner2">
+                  <div class="txt1">Special</div>
+                  <figure><img src="images/banner4.jpg" alt="" class="img"></figure>
+                  <div class="txt2">
+                    Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do.
+                  </div>
+                  <div class="txt3">read more</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
 
-			</ul>
-		</div>
-	</div>
+      </ul>
+    </div>
+  </div>
 </div>
 </div>
 </div>
@@ -370,7 +382,7 @@ $(window).load(function() {
 <h4>Custom cake from $4.99</h4>
 
 <p>
-	Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt.
+  Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt.
 </p>
 
 <a href="#" class="button1">details</a>
@@ -381,7 +393,7 @@ $(window).load(function() {
 <h4>Cakes for every special day</h4>
 
 <p>
-	Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt.
+  Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt.
 </p>
 
 <a href="#" class="button1">details</a>
@@ -392,7 +404,7 @@ $(window).load(function() {
 <h4>Corporate service specials</h4>
 
 <p>
-	Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt.
+  Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt.
 </p>
 
 <a href="#" class="button1">details</a>
@@ -451,13 +463,13 @@ $(window).load(function() {
 <div class="phone1">Best cakes <span>123-456-7890</span></div>
 
 <div class="social_wrapper">
-	<ul class="social clearfix">
-	    <li><a href="#"><img src="images/social_ic1.png"></a></li>
-	    <li><a href="#"><img src="images/social_ic2.png"></a></li>
-	    <li><a href="#"><img src="images/social_ic3.png"></a></li>
-	    <li><a href="#"><img src="images/social_ic4.png"></a></li>
-	    <li><a href="#"><img src="images/social_ic5.png"></a></li>
-	</ul>
+  <ul class="social clearfix">
+      <li><a href="#"><img src="images/social_ic1.png"></a></li>
+      <li><a href="#"><img src="images/social_ic2.png"></a></li>
+      <li><a href="#"><img src="images/social_ic3.png"></a></li>
+      <li><a href="#"><img src="images/social_ic4.png"></a></li>
+      <li><a href="#"><img src="images/social_ic5.png"></a></li>
+  </ul>
 </div>
 
 </div>
