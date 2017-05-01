@@ -27,7 +27,7 @@
 
 <script>
 $(document).ready(function() {
-	//
+    //
 
 
 
@@ -35,44 +35,44 @@ $(document).ready(function() {
 
 }); //
 $(window).load(function() {
-	//
+    //
 
-	// isotop
-	var $container = $('#isotope-items'),
-		$optionSet = $('#isotope-options'),
-	    $optionSets = $('#isotope-filters'),
-	    $optionLinks = $optionSets.find('a');
+    // isotop
+    var $container = $('#isotope-items'),
+        $optionSet = $('#isotope-options'),
+        $optionSets = $('#isotope-filters'),
+        $optionLinks = $optionSets.find('a');
     $container.isotope({
         filter: '*',
         layoutMode: 'fitRows'
     });
-   	$optionLinks.click(function(){
-   		var $this = $(this);
-    	// don't proceed if already selected
-		if ( $this.hasClass('selected') ) {
-			return false;
-		}
-   		$optionSet.find('.selected').removeClass('selected');
-   		$this.addClass('selected');
+    $optionLinks.click(function(){
+        var $this = $(this);
+        // don't proceed if already selected
+        if ( $this.hasClass('selected') ) {
+            return false;
+        }
+        $optionSet.find('.selected').removeClass('selected');
+        $this.addClass('selected');
 
         var selector = $(this).attr('data-filter');
         $container.isotope({
             filter: selector
         });
-      	return false;
+        return false;
     });
-	$(window).on("resize", function( event ) {
-		$container.isotope('reLayout');
-	});
+    $(window).on("resize", function( event ) {
+        $container.isotope('reLayout');
+    });
 
-	// touchTouch
-	$('.thumb-isotope .thumbnail a').touchTouch();
+    // touchTouch
+    $('.thumb-isotope .thumbnail a').touchTouch();
 
 }); //
 </script>
 <!--[if lt IE 8]>
-		<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg"border="0"alt=""/></a></div>
-	<![endif]-->
+        <div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg"border="0"alt=""/></a></div>
+    <![endif]-->
 
 <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -108,31 +108,22 @@ $(window).load(function() {
 <ul class="nav nav_left sf-menu clearfix">
   <li class=""><a href="index.html">Inicio</a></li>
   <li><a href="">Nosotros</a></li>
-  <li class="active sub-menu sub-menu-1"><a href="">T. Temáticas</a>
+  <li class="active sub-menu sub-menu-1"><a href="tortas.html">T. Temáticas</a>
     <ul>
-      <li><a href="">Infantiles</a></li>
-      <li><a href="">Deportivas</a></li>
-      <li><a href="">Bautizos</a></li>
-      <li><a href="">Primeras Comuniones</a></li>
-      <li><a href="">Matrimonios</a></li>
-      <li><a href="">Superheroes</a></li>
-      <li><a href="">Navideñas</a></li>
+      <li><a href="tortas.html">Infantiles</a></li>
+      <li><a href="tortas.html">Deportivas</a></li>
+      <li><a href="tortas.html">Bautizos</a></li>
+      <li><a href="tortas.html">Primeras Comuniones</a></li>
+      <li><a href="tortas.html">Matrimonios</a></li>
+      <li><a href="tortas.html">Superheroes</a></li>
+      <li><a href="tortas.html">Familiares</a></li>
+      <li><a href="tortas.html">Navideñas</a></li>
     </ul>
   </li>
 </ul>
 
 <ul class="nav nav_right sf-menu clearfix">
-  <li class="sub-menu sub-menu-1"><a href="">Cupcakes</a>
-    <ul>
-      <li><a href="">Infantiles</a></li>
-      <li><a href="">Deportivas</a></li>
-      <li><a href="">Bautizos</a></li>
-      <li><a href="">Primeras Comuniones</a></li>
-      <li><a href="">Matrimonios</a></li>
-      <li><a href="">Superheroes</a></li>
-      <li><a href="">Navideñas</a></li>
-    </ul>
-  </li>
+  <li><a href="">Cupcakes</a></li>
   <li><a href="">Brownies</a></li>
   <li><a href="">contacto</a></li>
 </ul>
@@ -190,183 +181,339 @@ $(window).load(function() {
 <div id="isotope-options">
     <ul id="isotope-filters" class="clearfix">
         <li><a href="#" class="selected" data-filter="*">Todas</a></li>
-        <li><a href="#" data-filter=".isotope-filter1">Infantiles</a></li>
-        <li><a href="#" data-filter=".isotope-filter2">Deportivas</a></li>
-        <li><a href="#" data-filter=".isotope-filter3">Bautizos</a></li>
-        <li><a href="#" data-filter=".isotope-filter3">Matrimonios</a></li>
-        <li><a href="#" data-filter=".isotope-filter3">Superheroes</a></li>
-        <li><a href="#" data-filter=".isotope-filter3">Navideñas</a></li>
+        <li><a href="#" data-filter=".infantiles">Infantiles</a></li>
+        <li><a href="#" data-filter=".deportivas">Deportivas</a></li>
+        <li><a href="#" data-filter=".bautizos">Bautizos</a></li>
+        <li><a href="#" data-filter=".matrimonios">Matrimonios</a></li>
+        <li><a href="#" data-filter=".superheroes">Superheroes</a></li>
+        <li><a href="#" data-filter=".familiares">Familiares</a></li>
     </ul>
 </div>
 
 <ul class="thumbnails" id="isotope-items">
-    <li class="span3 isotope-element isotope-filter1">
-		<div class="thumb-isotope">
-			<div class="thumbnail clearfix">
-				<a href="images/blank.png">
-					<figure>
-						<img src="images/gallery01.jpg" alt=""><em></em>
-					</figure>
-					<div class="caption">
-						Lorem ipsum dolor sit amet conse
-					</div>
-				</a>
-			</div>
-		</div>
+    <li class="span3 isotope-element infantiles">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/infantiles/1.jpg">
+                    <figure>
+                        <img src="images/fotos/tortas/infantiles/1.jpg" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Cars
+                    </div>
+                </a>
+            </div>
+        </div>
     </li>
-    <li class="span3 isotope-element isotope-filter2">
-		<div class="thumb-isotope">
-			<div class="thumbnail clearfix">
-				<a href="images/blank.png">
-					<figure>
-						<img src="images/gallery02.jpg" alt=""><em></em>
-					</figure>
-					<div class="caption">
-						Lorem ipsum dolor sit amet conse
-					</div>
-				</a>
-			</div>
-		</div>
+    <li class="span3 isotope-element deportivas">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/deportivas/1.jpg">
+                    <figure>
+                        <img src="images/fotos/tortas/deportivas/1.jpg" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Mesa de Billar
+                    </div>
+                </a>
+            </div>
+        </div>
     </li>
-    <li class="span3 isotope-element isotope-filter3">
-		<div class="thumb-isotope">
-			<div class="thumbnail clearfix">
-				<a href="images/blank.png">
-					<figure>
-						<img src="images/gallery03.jpg" alt=""><em></em>
-					</figure>
-					<div class="caption">
-						Lorem ipsum dolor sit amet conse
-					</div>
-				</a>
-			</div>
-		</div>
+    <li class="span3 isotope-element superheroes">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/superheroes/1.jpg">
+                    <figure>
+                        <img src="images/fotos/tortas/superheroes/1.jpg" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Capitan America
+                    </div>
+                </a>
+            </div>
+        </div>
     </li>
-    <li class="span3 isotope-element isotope-filter1">
-		<div class="thumb-isotope">
-			<div class="thumbnail clearfix">
-				<a href="images/blank.png">
-					<figure>
-						<img src="images/gallery04.jpg" alt=""><em></em>
-					</figure>
-					<div class="caption">
-						Lorem ipsum dolor sit amet conse
-					</div>
-				</a>
-			</div>
-		</div>
+    <li class="span3 isotope-element bautizos">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/bautizos/1.jpg">
+                    <figure>
+                        <img src="images/fotos/tortas/bautizos/1.jpg" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Primera Comunión
+                    </div>
+                </a>
+            </div>
+        </div>
     </li>
-    <li class="span3 isotope-element isotope-filter2">
-		<div class="thumb-isotope">
-			<div class="thumbnail clearfix">
-				<a href="images/blank.png">
-					<figure>
-						<img src="images/gallery05.jpg" alt=""><em></em>
-					</figure>
-					<div class="caption">
-						Lorem ipsum dolor sit amet conse
-					</div>
-				</a>
-			</div>
-		</div>
+    <li class="span3 isotope-element infantiles">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/infantiles/6.gif" >
+                    <figure >
+                        <img src="images/fotos/tortas/infantiles/6.gif" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Minnie Mouse
+                    </div>
+                </a>
+            </div>
+        </div>
     </li>
-    <li class="span3 isotope-element isotope-filter3">
-		<div class="thumb-isotope">
-			<div class="thumbnail clearfix">
-				<a href="images/blank.png">
-					<figure>
-						<img src="images/gallery06.jpg" alt=""><em></em>
-					</figure>
-					<div class="caption">
-						Lorem ipsum dolor sit amet conse
-					</div>
-				</a>
-			</div>
-		</div>
+    <li class="span3 isotope-element superheroes">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/superheroes/2.gif">
+                    <figure>
+                        <img src="images/fotos/tortas/superheroes/2.gif" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Warrior con Cupcakes
+                    </div>
+                </a>
+            </div>
+        </div>
     </li>
-    <li class="span3 isotope-element isotope-filter1">
-		<div class="thumb-isotope">
-			<div class="thumbnail clearfix">
-				<a href="images/blank.png">
-					<figure>
-						<img src="images/gallery07.jpg" alt=""><em></em>
-					</figure>
-					<div class="caption">
-						Lorem ipsum dolor sit amet conse
-					</div>
-				</a>
-			</div>
-		</div>
+    <li class="span3 isotope-element deportivas">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/deportivas/2.jpg">
+                    <figure>
+                        <img src="images/fotos/tortas/deportivas/2.jpg" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Camiseta de Futbol
+                    </div>
+                </a>
+            </div>
+        </div>
     </li>
-    <li class="span3 isotope-element isotope-filter2">
-		<div class="thumb-isotope">
-			<div class="thumbnail clearfix">
-				<a href="images/blank.png">
-					<figure>
-						<img src="images/gallery08.jpg" alt=""><em></em>
-					</figure>
-					<div class="caption">
-						Lorem ipsum dolor sit amet conse
-					</div>
-				</a>
-			</div>
-		</div>
+    <li class="span3 isotope-element infantiles">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/infantiles/11.jpg">
+                    <figure>
+                        <img src="images/fotos/tortas/infantiles/11.jpg" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Pepa Pig
+                    </div>
+                </a>
+            </div>
+        </div>
     </li>
-    <li class="span3 isotope-element isotope-filter3">
-		<div class="thumb-isotope">
-			<div class="thumbnail clearfix">
-				<a href="images/blank.png">
-					<figure>
-						<img src="images/gallery09.jpg" alt=""><em></em>
-					</figure>
-					<div class="caption">
-						Lorem ipsum dolor sit amet conse
-					</div>
-				</a>
-			</div>
-		</div>
+    <li class="span3 isotope-element familiares">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/familiares/1.jpg">
+                    <figure>
+                        <img src="images/fotos/tortas/familiares/1.jpg" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Torta Familiar Bienvenida
+                    </div>
+                </a>
+            </div>
+        </div>
     </li>
-    <li class="span3 isotope-element isotope-filter1">
-		<div class="thumb-isotope">
-			<div class="thumbnail clearfix">
-				<a href="images/blank.png">
-					<figure>
-						<img src="images/gallery10.jpg" alt=""><em></em>
-					</figure>
-					<div class="caption">
-						Lorem ipsum dolor sit amet conse
-					</div>
-				</a>
-			</div>
-		</div>
+    <li class="span3 isotope-element superheroes">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/superheroes/3.jpg">
+                    <figure>
+                        <img src="images/fotos/tortas/superheroes/3.jpg" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Iron Man
+                    </div>
+                </a>
+            </div>
+        </div>
     </li>
-    <li class="span3 isotope-element isotope-filter2">
-		<div class="thumb-isotope">
-			<div class="thumbnail clearfix">
-				<a href="images/blank.png">
-					<figure>
-						<img src="images/gallery11.jpg" alt=""><em></em>
-					</figure>
-					<div class="caption">
-						Lorem ipsum dolor sit amet conse
-					</div>
-				</a>
-			</div>
-		</div>
+    <li class="span3 isotope-element infantiles">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/infantiles/9.jpg">
+                    <figure>
+                        <img src="images/fotos/tortas/infantiles/9.jpg" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Paw Patrol
+                    </div>
+                </a>
+            </div>
+        </div>
     </li>
-    <li class="span3 isotope-element isotope-filter3">
-		<div class="thumb-isotope">
-			<div class="thumbnail clearfix">
-				<a href="images/blank.png">
-					<figure>
-						<img src="images/gallery12.jpg" alt=""><em></em>
-					</figure>
-					<div class="caption">
-						Lorem ipsum dolor sit amet conse
-					</div>
-				</a>
-			</div>
-		</div>
+    <li class="span3 isotope-element familiares">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/familiares/9.gif">
+                    <figure>
+                        <img src="images/fotos/tortas/familiares/9.gif" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Torta Familiar Cumpleaños
+                    </div>
+                </a>
+            </div>
+        </div>
+    </li>
+    <li class="span3 isotope-element superheroes">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/superheroes/4.jpg">
+                    <figure>
+                        <img src="images/fotos/tortas/superheroes/4.jpg" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Spider Man
+                    </div>
+                </a>
+            </div>
+        </div>
+    </li>
+    <li class="span3 isotope-element deportivas">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/deportivas/3.gif">
+                    <figure>
+                        <img src="images/fotos/tortas/deportivas/3.gif" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Torta Equipo de Futbol
+                    </div>
+                </a>
+            </div>
+        </div>
+    </li>
+    <li class="span3 isotope-element familiares">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/familiares/6.jpg">
+                    <figure>
+                        <img src="images/fotos/tortas/familiares/6.jpg" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Torta Corazón
+                    </div>
+                </a>
+            </div>
+        </div>
+    </li>
+    <li class="span3 isotope-element infantiles">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/infantiles/4.JPG">
+                    <figure>
+                        <img src="images/fotos/tortas/infantiles/4.jpg" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Frozen
+                    </div>
+                </a>
+            </div>
+        </div>
+    </li>
+    <li class="span3 isotope-element deportivas">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/deportivas/4.gif">
+                    <figure>
+                        <img src="images/fotos/tortas/deportivas/4.gif" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Torta Real Madrid con Cupcakes
+                    </div>
+                </a>
+            </div>
+        </div>
+    </li>
+    <li class="span3 isotope-element familiares">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/familiares/7.gif">
+                    <figure>
+                        <img src="images/fotos/tortas/familiares/7.gif" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Torta Flores
+                    </div>
+                </a>
+            </div>
+        </div>
+    </li>
+    <li class="span3 isotope-element infantiles">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/infantiles/5.JPG">
+                    <figure>
+                        <img src="images/fotos/tortas/infantiles/5.jpg" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Frozen II
+                    </div>
+                </a>
+            </div>
+        </div>
+    </li>
+    <li class="span3 isotope-element familiares">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/familiares/8.gif">
+                    <figure>
+                        <img src="images/fotos/tortas/familiares/8.gif" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Torta Familiar
+                    </div>
+                </a>
+            </div>
+        </div>
+    </li>
+
+
+    <li class="span3 isotope-element matrimonios">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/matrimonios/1.jpg">
+                    <figure>
+                        <img src="images/fotos/tortas/matrimonios/1.jpg" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Torta de Matrimonio con Corazones
+                    </div>
+                </a>
+            </div>
+        </div>
+    </li>
+    <li class="span3 isotope-element superheroes">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/superheroes/5.jpg">
+                    <figure>
+                        <img src="images/fotos/tortas/superheroes/5.jpg" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Superheroes con Cupcakes
+                    </div>
+                </a>
+            </div>
+        </div>
+    </li>
+    <li class="span3 isotope-element bautizos">
+        <div class="thumb-isotope">
+            <div class="thumbnail clearfix">
+                <a href="images/fotos/tortas/bautizos/2.jpg">
+                    <figure>
+                        <img src="images/fotos/tortas/bautizos/2.jpg" alt=""><em></em>
+                    </figure>
+                    <div class="caption">
+                        Torta Bautizo
+                    </div>
+                </a>
+            </div>
+        </div>
     </li>
 
 
