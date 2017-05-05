@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Contacto</title>
+<title>Tortas Temáticas</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Your description">
@@ -12,6 +12,8 @@
 
 <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
 <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/touchTouch.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/isotope.css" type="text/css" media="screen">
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
 
 <script type="text/javascript" src="js/jquery.js"></script>
@@ -20,11 +22,12 @@
 
 <script type="text/javascript" src="js/jquery.ui.totop.js"></script>
 
-<script type="text/javascript" src="js/cform.js"></script>
+<script type="text/javascript" src="js/touchTouch.jquery.js"></script>
+<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
 
 <script>
 $(document).ready(function() {
-	//
+    //
 
 
 
@@ -32,13 +35,44 @@ $(document).ready(function() {
 
 }); //
 $(window).load(function() {
-	//
+    //
+
+    // isotop
+    var $container = $('#isotope-items'),
+        $optionSet = $('#isotope-options'),
+        $optionSets = $('#isotope-filters'),
+        $optionLinks = $optionSets.find('a');
+    $container.isotope({
+        filter: '*',
+        layoutMode: 'fitRows'
+    });
+    $optionLinks.click(function(){
+        var $this = $(this);
+        // don't proceed if already selected
+        if ( $this.hasClass('selected') ) {
+            return false;
+        }
+        $optionSet.find('.selected').removeClass('selected');
+        $this.addClass('selected');
+
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+            filter: selector
+        });
+        return false;
+    });
+    $(window).on("resize", function( event ) {
+        $container.isotope('reLayout');
+    });
+
+    // touchTouch
+    $('.thumb-isotope .thumbnail a').touchTouch();
 
 }); //
 </script>
 <!--[if lt IE 8]>
-		<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg"border="0"alt=""/></a></div>
-	<![endif]-->
+        <div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.JPG"border="0"alt=""/></a></div>
+    <![endif]-->
 
 <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -61,37 +95,40 @@ $(window).load(function() {
 <div class="span12">
 <div class="top1 clearfix">
 
-<header><div class="logo_wrapper"><a href="index.html" class="logo"><img src="images/logo.png" alt=""></a></div></header>
+<header><div class="logo_wrapper"><a href="index.html" class="logo"><img src="images/logo-4f.png" alt=""></a></div></header>
 
 <div class="navbar navbar_">
-	<div class="navbar-inner navbar-inner_">
-		<a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</a>
-		<div class="nav-collapse nav-collapse_ collapse clearfix">
+  <div class="navbar-inner navbar-inner_">
+    <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </a>
+    <div class="nav-collapse nav-collapse_ collapse clearfix">
 <ul class="nav nav_left sf-menu clearfix">
-	<li><a href="index.html">Home</a></li>
-	<li class="sub-menu sub-menu-1"><a href="nosotros.html">about us</a>
-		<ul>
-			<li><a href="index-1.html">Who We Are</a></li>
-			<li><a href="index-1.html">Our Team</a></li>
-			<li><a href="index-1.html">Testimonials</a></li>
-			<li><a href="index-1.html">Blog</a></li>
-			<li><a href="404.html">404 page</a></li>
-		</ul>
-	</li>
-	<li><a href="index-2.html">services</a></li>
+  <li class=""><a href="index.html">Inicio</a></li>
+  <li><a href="nosotros.html">Nosotros</a></li>
+  <li class="active sub-menu sub-menu-1"><a href="tortas.html">T. Temáticas</a>
+    <ul>
+      <li><a href="tortas.html">Infantiles</a></li>
+      <li><a href="tortas.html">Deportivas</a></li>
+      <li><a href="tortas.html">Bautizos</a></li>
+      <li><a href="tortas.html">Primeras Comuniones</a></li>
+      <li><a href="tortas.html">Matrimonios</a></li>
+      <li><a href="tortas.html">Superheroes</a></li>
+      <li><a href="tortas.html">Familiares</a></li>
+      <li><a href="tortas.html">Navideñas</a></li>
+    </ul>
+  </li>
 </ul>
 
 <ul class="nav nav_right sf-menu clearfix">
-	<li><a href="index-3.html">gallery</a></li>
-	<li><a href="index-4.html">news</a></li>
-	<li class="active"><a href="index-5.html">contacts</a></li>
+  <li><a href="cupcakes.html">Cupcakes</a></li>
+  <li><a href="brownies.html">Brownies</a></li>
+  <li><a href="">contacto</a></li>
 </ul>
-		</div>
-	</div>
+    </div>
+  </div>
 </div>
 
 
@@ -126,7 +163,7 @@ $(window).load(function() {
 <div class="">
 <div class="clearfix">
 <div class="h1_inner">
-<h1>Contacto</h1>
+<h1>Escríbenos</h1>
 </div>
 </div>
 </div>
@@ -136,14 +173,32 @@ $(window).load(function() {
 <div id="content">
 <div class="container">
 
-<h2>Our Address</h2>
+<div class="row">
+<div class="span12">
+
+<div id="note"></div>
+
+
+<!-- www.123contactform.com script begins here -->
+<iframe allowTransparency="true" style="min-height:600px; height:inherit; overflow:auto;" width="100%" id="contactform123" name="contactform123" marginwidth="0" marginheight="0" frameborder="0" src="http://www.123contactform.com/my-contact-form-2667388.html">
+<p>Tu navegador no admite iframes. No se puede mostrar el formulario de contacto. Por favor, llamanos al 318-8446320 , o
+ envianos un correo al <a href="mailto:info@laisabellareposteriagourmet.com">info@laisabellareposteriagourmet.com</a></p>
+</iframe>
+
+
+<div class="line1"></div>
+
+</div>
+</div>
+
+<h2>Ubicación</h2>
 
 <div class="row">
 <div class="span9">
 
 <figure class="google_map">
 	<div class="figure_inner">
-		<iframe src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Glasgow,&amp;aq=&amp;sll=46.975033,31.994583&amp;sspn=0.368248,0.617294&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=Glasgow,+Glasgow+City,+United+Kingdom&amp;t=m&amp;ll=55.866932,-4.256344&amp;spn=0.020324,0.070896&amp;z=13&amp;output=embed"></iframe>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15906.869313256648!2d-74.11145142315769!3d4.644426246018809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bea5a7f21e3%3A0x65e906aa23b59170!2sCiudad+Salitre+Oriental%2C+Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1493959794773" width="600" height="450" allowfullscreen></iframe>
 	</div>
 </figure>
 
@@ -152,98 +207,24 @@ $(window).load(function() {
 
 <p>
 	<b>
-		Best Cakes
+		La Isabella Repostería
 	</b>
 </p>
 
 <p>
-	615 East 13th Street<br>
-Kansas City, MO 64106<br>
-Telephone: +1 800 123 1895<br>
-E-mail: <a href="#">mail@bteamny.com</a>
+	 Ciudad Salitre Oriental<br>
+ Bogotá D.C. , Colombia <br>
+Celular: +57 318-8446320<br>
+E-mail: <a href="mailto:info@laisabellareposteriagourmet.com">info@laisabellareposteriagourmet.com</a>
 </p>
 
 
 </div>
 </div>
 
-<div class="line1"></div>
-
-<h3></h3>
-
-<div class="row">
-<div class="span12">
-
-<div id="note"></div>
-
-<!-- www.123contactform.com script begins here -->
-<iframe allowTransparency="true" style="min-height:800px; height:inherit; overflow:auto;" width="100%" id="contactform123" name="contactform123" marginwidth="0" marginheight="0" frameborder="0" src="http://www.123contactform.com/my-contact-form-2661271.html">
-<p>Tu navegador no admite iframes. No se puede mostrar el formulario de contacto. Por favor, usa otro método de contacto (tel, email, etc.)</p>
-</iframe>
-
-<p>Powered by <a class="footerLink13" title="123ContactForm" href="http://www.123contactform.com">123ContactForm</a>&nbsp;|&nbsp;<a style="font-size:small!important;color:#000000!important; text-decoration:underline!important;" title="¿Parece phishing? ¡Repórtalo!" href="http://www.123contactform.com/sfnew.php?s=123contactform-52&control119314=http:///contact-form--2661271.html&control190=Report%20abuse" rel="nofollow">Reportar abuso</a></p><!-- www.123contactform.com script ends here -->
-
-<!-- <div id="fields">
-	<form id="ajax-contact-form" class="form-horizontal" action="javascript:alert('success!');">
-		<div class="row">
-			<div class="span4">
-				<div class="control-group">
-				    <label class="control-label" for="inputName">Your full name:</label>
-				    <div class="controls">
-				      <input class="span4" type="text" id="inputName" name="name" value="Your full name:" onBlur="if(this.value=='') this.value='Your full name:'" onFocus="if(this.value =='Your full name:' ) this.value=''">
-				    </div>
-				</div>
-			</div>
-			<div class="span4">
-				<div class="control-group">
-				    <label class="control-label" for="inputEmail">Your email:</label>
-				    <div class="controls">
-				      <input class="span4" type="text" id="inputEmail" name="email" value="Your email:" onBlur="if(this.value=='') this.value='Your email:'" onFocus="if(this.value =='Your email:' ) this.value=''">
-				    </div>
-				</div>
-			</div>
-			<div class="span4">
-				<div class="control-group">
-				    <label class="control-label" for="inputPhone">Phone number:</label>
-				    <div class="controls">
-				      <input class="span4" type="text" id="inputPhone" name="phone" value="Phone number:" onBlur="if(this.value=='') this.value='Phone number:'" onFocus="if(this.value =='Phone number:' ) this.value=''">
-				    </div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="span12">
-				<div class="control-group">
-				    <label class="control-label" for="inputMessage">Message:</label>
-				    <div class="controls">
-				      <textarea class="span12" id="inputMessage" name="content" onBlur="if(this.value=='') this.value='Message:'"
-                        onFocus="if(this.value =='Message:' ) this.value=''">Message:</textarea>
-				    </div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="span12">
-				<div class="control-group capthca">
-				    <label class="control-label" for="inputCapthca">Capthca:</label>
-				    <div class="controls">
-				      <input class="" type="text" id="inputCapthca" name="capthca" value="Capthca:" onBlur="if(this.value=='') this.value='Capthca:'" onFocus="if(this.value =='Capthca:' ) this.value=''">
-				      <img src="captcha/captcha.php">
-				    </div>
-				</div>
-			</div>
-		</div>
-		<button type="submit" class="submit">Submit</button>
-	</form>
-</div>
- -->
 
 </div>
 
-</div>
-
-
-</div>
 </div>
 
 <div class="bot1_wrapper">
@@ -253,7 +234,7 @@ E-mail: <a href="#">mail@bteamny.com</a>
 <div class="span12">
 <div class="bot1 clearfix">
 <div class="slogan2">
-<div class="txt1">Made with love for <span>special</span> day</div>
+<div class="txt1">Hechos con amor para momentos <span>especiales</span></div>
 <div class="txt2">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. </div>
 </div>
 </div>
@@ -270,31 +251,31 @@ E-mail: <a href="#">mail@bteamny.com</a>
 <div class="bot2">
 <div class="row">
 <div class="span2 block1">
-<div class="logo_wrapper2"><a href="index.html" class="logo"><img src="images/logo2.png" alt=""></a></div>
+<div class="logo_wrapper2"><a href="index.html" class="logo"><img src="images/logo-4f.png" alt=""></a></div>
 </div>
 <div class="span7 block2">
-<div class="phone1">Best cakes <span>123-456-7890</span></div>
+<div class="phone1">Llámanos<span> 318-8446320</span></div>
 
 <div class="social_wrapper">
-	<ul class="social clearfix">
-	    <li><a href="#"><img src="images/social_ic1.png"></a></li>
-	    <li><a href="#"><img src="images/social_ic2.png"></a></li>
-	    <li><a href="#"><img src="images/social_ic3.png"></a></li>
-	    <li><a href="#"><img src="images/social_ic4.png"></a></li>
-	    <li><a href="#"><img src="images/social_ic5.png"></a></li>
-	</ul>
+  <ul class="social clearfix">
+      <li><a href="#"><img src="images/social_ic1.png"></a></li>
+      <li><a href="#"><img src="images/social_ic2.png"></a></li>
+      <li><a href="#"><img src="images/social_ic3.png"></a></li>
+      <li><a href="#"><img src="images/social_ic4.png"></a></li>
+      <li><a href="#"><img src="images/social_ic5.png"></a></li>
+  </ul>
 </div>
 
 </div>
 <div class="span3 block3">
-<div class="bot2_title">Our Address</div>
+<div class="bot2_title">Nuestra Ubicación</div>
 <div class="adress1">
-8901 Marmora Road,<br>Glasgow, D04 89GR.
+8901 Marmora Road,<br>Bogota, DC.
 </div>
 </div>
 </div>
 </div>
-<footer>Copyright  &copy; 2014. All rights reserved. Best cake shop.</footer>
+<footer>Copyright  &copy; 2017. All rights reserved. La Isabella Repostería Gourmet.</footer>
 </div>
 </div>
 </div>
